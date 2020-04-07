@@ -11,17 +11,16 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.PersonOverviewController">
    <children>
       <SplitPane dividerPositions="0.29797979797979796" layoutX="152.0" layoutY="78.0" prefHeight="500.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="266.0">
                <children>
-                  <TableView prefHeight="498.0" prefWidth="175.33333333333334" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TableView fx:id="personTable" prefHeight="498.0" prefWidth="175.33333333333334" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn prefWidth="75.0" text="Name" />
-                      <TableColumn prefWidth="75.0" text="Language" />
+                      <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Name" />
+                      <TableColumn fx:id="languageColumn" prefWidth="75.0" text="Language" />
                     </columns>
                      <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -55,11 +54,11 @@
                      </rowConstraints>
                      <children>
                         <Label text="Name" />
-                        <Label text="Label" GridPane.columnIndex="1" />
+                        <Label fx:id="nameLabel" text="Label" GridPane.columnIndex="1" />
                         <Label text="Language" GridPane.rowIndex="1" />
-                        <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="languageLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <Label text="IDE" GridPane.rowIndex="2" />
-                        <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="ideLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                      </children>
                   </GridPane>
                   <ButtonBar layoutX="143.0" layoutY="451.0" prefHeight="40.0" prefWidth="200.0">
