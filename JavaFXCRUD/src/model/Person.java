@@ -7,16 +7,30 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.StringProperty;
 
+/**
+ * Model class for a Person.
+ *
+ * @author Nicholas Dwiarto
+ */
 public class Person {
 	private final StringProperty name;
 	private final StringProperty language;
 	private final IntegerProperty id;
 	private final StringProperty ide;
 	
+    /**
+     * Default constructor.
+     */
 	public Person() {
 		this(null, null);
 	}
 	
+    /**
+     * Constructor with some initial data.
+     * 
+     * @param name
+     * @param language
+     */
 	public Person(String name, String language) {
 		this.name = new SimpleStringProperty(name);
 		this.language = new SimpleStringProperty(language);
