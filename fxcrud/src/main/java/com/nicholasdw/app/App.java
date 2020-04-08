@@ -1,4 +1,4 @@
-package application;
+package com.nicholasdw.app;
 
 // Natural Java Libraries
 import java.io.IOException;
@@ -8,18 +8,20 @@ import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 // Model, View, Controller
-import model.*;
-import view.*;
+import com.nicholasdw.model.Person;
+import com.nicholasdw.view.*;
 
-public class Main extends Application {
-	
+/**
+ * JavaFX App
+ */
+public class App extends Application {
 	private Stage primaryStage;
 	private BorderPane rootLayout;
 	
@@ -31,7 +33,7 @@ public class Main extends Application {
     /**
      * Constructor
      */
-	public Main() {
+	public App() {
 		// Sample data.
 		personData.add(new Person("Nicholas", "Python, Ruby"));
 		personData.add(new Person("Attar", "Java, C"));
@@ -63,7 +65,7 @@ public class Main extends Application {
 		try {
 			// FXML Loader and casting.
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Main.class.getResource("/view/RootLayout.fxml"));
+			loader.setLocation(App.class.getResource("RootLayout.fxml"));
 			rootLayout = (BorderPane) loader.load();
 			
 			// Show the scene.
@@ -83,7 +85,7 @@ public class Main extends Application {
 		try {
 			// FXML Loader and casting.
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Main.class.getResource("/view/UserInterface.fxml"));
+			loader.setLocation(App.class.getResource("UserInterface.fxml"));
 			AnchorPane personOverview = (AnchorPane) loader.load();
 			
 			// Set to center.
@@ -118,7 +120,7 @@ public class Main extends Application {
 		try {
 			// FXML Loader
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Main.class.getResource("/view/UserInterfaceEditModal.fxml"));
+			loader.setLocation(App.class.getResource("UserInterfaceEditModal.fxml"));
 			AnchorPane modal = (AnchorPane) loader.load();
 			
 			// Dialog Stage
@@ -149,4 +151,5 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
+
 }

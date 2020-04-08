@@ -1,0 +1,5 @@
+com\nicholasdw\app\App.class
+com\nicholasdw\model\Person.class
+com\nicholasdw\view\PersonEditDialogController.class
+module-info.class
+com\nicholasdw\view\PersonOverviewController.class

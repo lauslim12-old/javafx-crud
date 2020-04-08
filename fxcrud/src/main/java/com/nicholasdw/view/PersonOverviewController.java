@@ -1,4 +1,4 @@
-package view;
+package com.nicholasdw.view;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -7,8 +7,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
-import application.Main;
-import model.Person;
+import com.nicholasdw.app.App;
+import com.nicholasdw.model.Person;
 
 public class PersonOverviewController {
 	
@@ -31,7 +31,7 @@ public class PersonOverviewController {
 	private Label ideLabel;
 	
 	// Reference to main
-	private Main main;
+	private App main;
 	
     /**
      * The constructor.
@@ -141,7 +141,7 @@ public class PersonOverviewController {
      * 
      * @param Main
      */
-	public void setMainApp(Main main) {
+	public void setMainApp(App main) {
 		this.main = main;
 		
 		personTable.setItems(main.getPersonData());
