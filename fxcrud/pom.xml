@@ -8,7 +8,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-    </properties>    
+    </properties>   
     <dependencies>
         <dependency>
             <groupId>org.openjfx</groupId>
@@ -50,8 +50,31 @@
                 <version>0.0.4</version>
                 <configuration>
                     <mainClass>fxcrud/com.nicholasdw.app.App</mainClass>
+                    <launcher>programmer-notes</launcher>
+                    <jlinkImageName>appDir</jlinkImageName>
+                    <jlinkZipName>appZip</jlinkZipName>
                 </configuration>
             </plugin>
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-shade-plugin</artifactId>
+			    <version>3.2.1</version>
+			    <executions>
+			        <execution>
+			            <phase>package</phase>
+			            <goals>
+			                <goal>shade</goal>
+			            </goals>
+			            <configuration>
+			                <transformers>
+			                    <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+			                        <mainClass>com.nicholasdw.app.Launcher</mainClass>
+			                    </transformer>
+			                </transformers>
+			            </configuration>
+			        </execution>
+			    </executions>
+			</plugin>
         </plugins>
     </build>
 </project>
