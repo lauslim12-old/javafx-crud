@@ -24,6 +24,7 @@ In this project, Maven and Java goes hand in hand to make an easy architecture t
 - Delete a programmer.
 
 TODO:
+- Persistent database with XML or MySQL,
 - Sign Up System and Login System,
 - More details about a programmer,
 - POS System to hire a programmer, and
