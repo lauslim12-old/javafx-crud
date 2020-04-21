@@ -1,0 +1,35 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.background-gradient {
+	-fx-background-color: linear-gradient(to right bottom, #7ed56f, #28b485);
+}
+	
+.text-label {
+	-fx-font-size: 14px;
+	-fx-font-family: 'Arial', 'Helvetica', sans-serif;
+	-fx-text-fill: #333;
+}
+
+.split-pane-divider {
+   -fx-background-color: #333;
+   -fx-padding: 1px;
+}
+
+.tab-header-background {
+	-fx-background-color: transparent;
+}
+
+.table-style {
+	-fx-background-color: #ccc;
+}
+
+.column-header {
+	-fx-background-color: #55c57a;	
+}
+
+.randomTab {
+	-fx-color: #666;
+}
+
+.tab-label {
+	-fx-text-fill: #333;
+}

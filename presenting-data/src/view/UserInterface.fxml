@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.PersonController">
+   <children>
+      <SplitPane dividerPositions="0.4214046822742475" layoutX="152.0" layoutY="78.0" prefHeight="500.0" prefWidth="600.0" styleClass="split-pane-divider" stylesheets="@application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="251.0" prefWidth="175.0">
+               <children>
+                  <TableView fx:id="personTable" layoutY="233.0" prefHeight="250.0" prefWidth="175.0" AnchorPane.bottomAnchor="248.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Name" />
+                      <TableColumn fx:id="languageColumn" prefWidth="75.0" text="Language" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <styleClass>
+                        <String fx:value="table-style" />
+                        <String fx:value="text-label" />
+                     </styleClass>
+                  </TableView>
+                  <Accordion layoutY="229.0" prefHeight="269.0" prefWidth="175.0" styleClass="background-gradient" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="229.0">
+                    <panes>
+                      <TitledPane animated="false" styleClass="text-label" text="Website">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView fx:id="websiteList" layoutX="22.2" layoutY="41.2" prefHeight="175.0" prefWidth="227.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="30.0" />
+                                    <Label layoutX="75.0" layoutY="14.0" styleClass="text-label" text="List of Websites" />
+                                 </children></AnchorPane>
+                        </content>
+                      </TitledPane>
+                      <TitledPane animated="false" styleClass="text-label" text="Nicholas Dwiarto">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="153.0" fitWidth="153.0" layoutX="46.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@square.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children></AnchorPane>
+                        </content>
+                      </TitledPane>
+                    </panes>
+                  </Accordion>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="211.0" prefWidth="345.0" styleClass="background-gradient">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" styleClass="text-label" text="Detail:" />
+                  <GridPane layoutX="24.0" layoutY="52.0" prefHeight="84.0" prefWidth="311.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="188.33331298828125" minWidth="10.0" prefWidth="155.99997965494794" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="281.66668701171875" minWidth="10.0" prefWidth="154.66668701171875" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label styleClass="text-label" text="Name:" />
+                        <Label fx:id="nameLabel" styleClass="text-label" text="Label" GridPane.columnIndex="1" />
+                        <Label styleClass="text-label" text="Language:" GridPane.rowIndex="1" />
+                        <Label fx:id="languageLabel" styleClass="text-label" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <TabPane layoutX="12.0" layoutY="282.0" prefHeight="201.0" prefWidth="321.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Names">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="allNameTable" fixedCellSize="0.0" prefHeight="170.66666666666666" prefWidth="200.0" styleClass="table-style" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="allNameColumn" editable="false" prefWidth="-1.0" text="Names" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Languages">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="allLangTable" fixedCellSize="0.0" layoutX="35.0" prefHeight="211.0" prefWidth="321.0" styleClass="table-style" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="allLangColumn" prefWidth="-1.0" text="Languages" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                     <styleClass>
+                        <String fx:value="tab-header-background" />
+                        <String fx:value="text-label" />
+                        <String fx:value="randomTab" />
+                     </styleClass>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
