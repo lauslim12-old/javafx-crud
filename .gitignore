@@ -1,6 +1,7 @@
 # Maven
 fxcrud/dependency-reduced-pom.xml
 fxcrud/target/
+presenting-data/build.fxbuild
 
 # Mac
 .DS_Store
