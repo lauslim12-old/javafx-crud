@@ -21,7 +21,6 @@ public class Main extends Application {
 	private Stage primaryStage;
 	private BorderPane rootLayout;
 	
-	
     /**
      * The data as an observable list of Persons.
      */
@@ -46,19 +45,19 @@ public class Main extends Application {
 	}
 	
     /**
-     * Returns the data as an observable list of Persons. 
-     * @return
-     */
-	public ObservableList<Person> getPersonData() {
-		return personData;
-	}
-	
-    /**
      * Returns the data as an observable list of Nicholas websites. 
      * @return
      */
 	public ObservableList<String> getWebsiteData() {
 		return websiteData;
+	}
+
+    /**
+     * Returns the data as an observable list of Persons. 
+     * @return
+     */
+	public ObservableList<Person> getPersonData() {
+		return personData;
 	}
 	
 	@Override
