@@ -1,5 +1,7 @@
 # JavaFX CRUD - Programmer Notes Application
-I am making a desktop application with Java, Maven, and JavaFX. Planning to make this into an interactive POS System or a database rich in GUI.
+I am making a desktop application with Java, Maven, and JavaFX. Planning to make this into an interactive POS System or a database rich in GUI. There's two projects in this project:
+- `fxcrud` is a project capable of doing CRUD operations (aka the main project),
+- `presenting-data` is a simple project made by me to try JavaFX CSS and design elements.
 
 ## Architecture / Philosophies
 * Object Oriented.
@@ -33,7 +35,7 @@ TODO:
 ## Project Structure
 The project structure follows the Model Resource (View) Controller Software Architecture, Standard Maven Lifecycle from http://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html, and Standard Maven Directory from http://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html.
 
-## Installations and Usage
+## Installations and Usage (FXCRUD Project)
 For Users,
 - Make sure that you have the latest version of Java. My Java version is `java 13.0.1 2019-10-15`. I use JDK, download it from their official website (just download the JavaSE, it's an all in one package).
 - Use `git pull repo` to fetch the code, or download it by using `git clone`.
@@ -52,3 +54,11 @@ For Developers, same as above, but don't forget to follow Maven Standard Lifecyc
 
 If you want to simply create a fat/uber JAR with Shade, then simply do the following:
 - `mvn clean package`. The resulting program will be located in the `target/` folder.
+
+## Installations and Usage (Presenting Data Project)
+For Users/Developers,
+- `git pull repo` or `git clone` to copy the repository.
+- Open the `presenting-data` project in Eclipse or Intellij Idea.
+- Make sure that you already have JavaFX configured in your IDE.
+- Run the project as you used to do, but don't forget to add these extra VM arguments: `--module-info path/to/javafx/sdk/lib --add-modules javafx.controls, javafx.fxml`
+- Enjoy!
